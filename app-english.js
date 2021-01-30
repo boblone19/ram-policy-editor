@@ -29,6 +29,81 @@ var ActionList = [{
 	label: 'ECS_Power Action',
 	children: ['ecs:RunInstances', 'ecs:RebootInstance', 'ecs:StartInstance', 'ecs:StopInstance',]
 },
+{
+	label: 'ECS_Networking',
+	children: ['ecs:AllocatePublicIpAddress', 'ecs:AttachClassicLinkVpc', 'ecs:ModifyInstanceVpcAttribute', 'ecs:ModifyInstanceNetworkSpec', 'ecs:DetachClassicLinkVpc', 'ecs:ConvertNatPublicIpToEip', 'ecs:ReleasePublicIpAddress',]
+},
+{
+	label: 'ECS_Security Group',
+	children: ['ecs:CreateSecurityGroup', 'ecs:JoinSecurityGroup', 'ecs:ModifySecurityGroupAttribute', 'ecs:LeaveSecurityGroup', 'ecs:AuthorizeSecurityGroup', 'ecs:AuthorizeSecurityGroupEgress',
+	'ecs:ModifySecurityGroupEgressRule', 'ecs:ModifySecurityGroupRule', 'ecs:DeleteSecurityGroup', 'ecs:RevokeSecurityGroup', 'ecs:RevokeSecurityGroupEgress',]
+},
+{
+	label: 'ECS_Backup',
+	children: ['ecs:CreateSnapshot', 'ecs:DeleteSnapshot', 'ecs:CreateAutoSnapshotPolicy', 'ecs:ModifyAutoSnapshotPolicy', 'ecs:ApplyAutoSnapshotPolicy', 'ecs:ModifySnapshotAttribute', 'ecs:CancelAutoSnapshotPolicy', 'ecs:DeleteAutoSnapshotPolicy',]
+},
+{
+	label: 'ECS_Other',
+	children: ['ecs:AddTags', 'ecs:DescribeTags', 'ecs:RemoveTags', 'ecs:DescribeClassicLinkInstances', 'ecs:DescribeDiskMonitorData', 'ecs:DescribeDisks', 'ecs:DescribeImages', 'ecs:DescribeInstanceMonitorData', 'ecs:DescribeInstanceAttribute', 'ecs:DescribeInstances', 'ecs:DescribeInstanceStatus', 'ecs:DescribeInstanceVncPasswd', 'ecs:DescribeInstanceVncUrl', 'ecs:DescribeKeyPairs', 'ecs:DescribePrice', 'ecs:DescribeRenewalPrice', 'ecs:DescribeSecurityGroupAttribute', 'ecs:DescribeSecurityGroups', 'ecs:DescribeSnapshotAttribute', 'ecs:DescribeSnapshotLinks', 'ecs:DescribeSnapshotMonitorData', 'ecs:DescribeSnapshots', ]
+},
+{
+	label: 'VPC_Instance',
+	children: ['vpc:CreateVpc', 'vpc:DeleteVpc', 'vpc:ModifyVpcAttribute', 'vpc:DescribeVpcs',]
+},
+{
+	label: 'VPC_Switch',
+	children: ['vpc:CreateVSwitch', 'vpc:DeleteVSwitch', 'vpc:DescribeVSwitches', 'vpc:ModifyVSwitchAttribute',]
+},
+{
+	label: 'VPC_Routing',
+	children: ['vpc:DescribeVRouters', 'vpc:ModifyVRouterAttribute', 'vpc:CreateRouteEntry', 'vpc:DeleteRouteEntry', 'vpc:DescribeRouteTables', 'vpc:CreateForwardEntry', 'vpc:DeleteForwardEntry', 'vpc:ModifyForwardEntry', 'vpc:DescribeForwardTableEntries',]
+},
+{
+	label: 'VPC_Gateway',
+	children: ['vpc:CreateNatGateway', 'vpc:DescribeNatGateways', 'vpc:ModifyNatGatewaySpec', 'vpc:ModifyNatGatewayAttribute', 'vpc:DeleteNatGateway', 'vpc:CreateSnatEntry', 'vpc:ModifySnatEntry', 
+	'vpc:DescribeSnatTableEntries', 'vpc:DeleteSnatEntry', 'vpc:CreateCustomerGateway', 'vpc:DeleteCustomerGateway', 'vpc:DescribeCustomerGateway', 'vpc:DescribeCustomerGateways', 'vpc:ModifyCustomerGatewayAttribute',]
+},
+{
+	label: 'VPC_IP',
+	children: ['vpc:CreateHaVip', 'vpc:DeleteHaVip', 'vpc:AssociateHaVip', 'vpc:UnassociateHaVip', 'vpc:DescribeHaVips', 'vpc:AllocateEipAddress', 'vpc:AssociateEipAddres', 'vpc:DescribeEipAddresses', 'vpc:UnassociateEipAddress', 'vpc:ReleaseEipAddress', 'vpc:DescribeEipMonitorData', ]
+},
+{
+	label: 'VPC_Bandwith',
+	children: ['vpc:CreateBandwidthPackage', 'vpc:DescribeBandwidthPackages', 'vpc:ModifyBandwidthPackageSpec', 'vpc:ModifyBandwidthPackageAttribute', 'vpc:AddBandwidthPackageIps', 'vpc:RemoveBandwidthPackageIps', 'vpc:DeleteBandwidthPackage', 'vpc:CreateGlobalAccelerationInstance', 'vpc:AssociateGlobalAccelerationInstance', 'vpc:UnassociateGlobalAccelerationInstance', 'vpc:ModifyGlobalAccerlationInstanceSpec', 'vpc:ModifyGlobalAccerlationInstanceAttributes', 
+	'vpc:DeleteGlobalAccelerationInstance', 'vpc:DescribeGlobalAccelerationInstances', 
+	'vpc:AddGlobalAccelerationInstanceIp', 'vpc:RemoveGlobalAccelerationInstanceIp', 'vpc:DescribeServerRelatedGlobalAccelerationInstances', ]
+},
+{
+	label: 'VPC_VPN Connection',
+	children: ['vpc:CreateVpnConnection', 'vpc:DeleteVpnConnection', 'vpc:DescribeVpnConnection', 'vpc:DescribeVpnConnections', 'vpc:ModifyVpnConnectionAttribute', 'vpc:DownloadVpnConnectionConfig', 'vpc:DeleteVpnGateway', 'vpc:DescribeVpnGateway', 'vpc:DescribeVpnGateways', 'vpc:ModifyVpnGatewayAttribute',]
+},
+{
+	label: 'RDS_Instance',
+	children: ['rds:CreateDBInstance', 'rds:CancelImport', 'rds:SwitchDBInstanceNetType', 'rds:ModifyDBInstanceMaintainTime', 'rds:CreatePrepaidDBInstanceForChannel', 'rds:ModifyPrepaidDBInstanceSpec', 'rds:CreatePostpaidDBInstanceForChannel', 
+	'rds:ModifyPostpaidDBInstanceSpec', 'rds:RestartDBInstance', 'rds:UpgradeDBInstanceEngineVersion',]
+},
+{
+	label: 'RDS_Database',
+	children: ['rds:CreateDatabase', 'rds:CreateUploadPathForSQLServer', 'rds:ImportDataBaseBetweenInstances', 'rds:CreateAccount', 'rds:GrantAccountPrivilege', 'rds:ModifyeParameter', 'rds:ModifySecurityIps', 'rds:PurgeDBInstanceLog', 'rds:DeleteDatabase', 'rds:DeleteDBInstance', 'rds:ResetAccountPassword', 'rds:RevokeAccountPrivilege', 'rds:DeleteAccount',]
+},
+{
+	label: 'RDS_Backup',
+	children: ['rds:CreateBackup', 'rds:CreateTempDBInstance', 'rds:ModifyBackupPolicy',]
+},
+{
+	label: 'RDS_Tagging',
+	children: ['rds:DescribeDBInstances', 'rds:ModifyDBDescription', 'rds:ModifyDBInstanceDescription', 'rds:DescribeFilesForSQLServer', 'rds:DescribeImportsForSQLServer', 'rds:DescribeDBInstancePerformance', 'rds:DescribeSlowLogRecords', 'rds:DescribeBinlogFiles', 'rds:DescribeSQLLogRecords', 'rds:DescribeOptimizeAdviceOnMissPK', 'rds:DescribeOptimizeAdviceOnMissIndex', 'rds:DescribeParameters', 'rds:DescribeDBInstanceAttribute', 'rds:DescribeDatabases', 'rds:DescribeAccounts', 'rds:ModifyAccountDescription', 'rds:DescribeBackups', 'rds:DescribeBackupPolicy', 'rds:DescribeResourceUsage', 'rds:DescribeSlowLogs', 'rds:DescribeErrorLogs', 'rds:DescribeSQLLogReports', 'rds:DescribeOptimizeAdviceOnStorage', 'rds:DescribeOptimizeAdviceOnExcessIndex', 'rds:DescribeOptimizeAdviceByDBA',]	
+},
+{
+	label: 'SLB_General',
+	children: ['slb:CreateLoadBalancer', 'slb:ModifyLoadBalancerInternetSpec', 'slb:DeleteLoadBalancer', 'slb:SetLoadBalancerStatus', 'slb:SetLoadBalancerName', 'slb:DescribeLoadBalancers', 'slb:DescribeLoadBalancerAttribute', 'slb:DescribeRegions', 'slb:UploadServerCertificate', 'slb:DeleteServerCertificate', 'slb:SetServerCertificateName', 'slb:DescribeServerCertificate', 'slb:DescribeServerCertificates', 'slb:CreateLoadBalancerHTTPListener',  'slb:CreateLoadBalancerHTTPSListener', 'slb:CreateLoadBalancerTCPListener', 'slb:CreateLoadBalancerUDPListener', 'slb:DeleteLoadBalancerListener', 'slb:StartLoadBalancerListener',
+	'slb:StopLoadBalancerListener', 'slb:SetLoadBalancerHTTPListenerAttribute', 'slb:SetLoadBalancerHTTPSListenerAttribute', 'slb:SetLoadBalancerTCPListenerAttribute', 'slb:SetLoadBalancerUDPListenerAttribute', 'slb:DescribeLoadBalancerHTTPListenerAttribute', 'slb:DescribeLoadBalancerHTTPSListenerAttribute', 'slb:DescribeLoadBalancerTCPListenerAttribute', 'slb:DescribeLoadBalancerUDPListenerAttribute',]
+},
+{
+	label: 'SLB_Security',
+	children: ['slb:AddBackendServers', 'slb:RemoveBackendServers', 'slb:SetBackendServers', 'slb:DescribeHealthStatus', 'slb:CreateVServerGroup', 'slb:SetVServerGroupAttribute', 'slb:DeleteVServerGroup', 'slb:DescribeVServerGroups', 'slb:DescribeVServerGroupAttribute', 'slb:AddVServerGroupBackendServers', 'slb:RemoveVServerGroupBackendServers', 'slb:ModifyVServerGroupBackendServers', 'slb:CreateAccessControlList', 'slb:DeleteAccessControlList',
+	'slb:DescribeAccessControlLists', 'slb:DescribeAccessControlListAttribute',  'slb:SetAccessControlListAttribute', 'slb:AddAccessControlListEntry', 'slb:RemoveAccessControlListEntry',]
+},
 {	
   label: 'OSS_General',
   children: ['oss:*', 'oss:Get*', 'oss:Put*', 'oss:List*',]
