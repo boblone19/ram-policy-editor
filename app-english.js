@@ -11,23 +11,33 @@ var EffectList = ['Allow', 'Deny'];
 
 var ActionList = [{
 	label: 'ECS_General',
-	children: ['ecs:*', 'ecs:CreateInstance', 'ecs:DeleteInstance', 'ecs:ModifyInstanceAttribute', 'ecs:ModifyInstanceAutoReleaseTime', 'ecs:ModifyInstanceChargeType', 'ecs:ModifyInstanceVncPasswd']
+	children: ['ecs:*', 'ecs:CreateInstance', 'ecs:DeleteInstance', 'ecs:ModifyInstanceAttribute', 'ecs:ModifyInstanceAutoReleaseTime', 'ecs:ModifyInstanceChargeType', 'ecs:ModifyInstanceVncPasswd',]
 },
 {
 	label: 'ECS_Disk',
-	children: ['ecs:CreateDisk', 'ecs:AttachDisk', 'ecs:ModifyDiskAttribute', 'ecs:ReplaceSystemDisk', 'ecs:ReInitDisk', 'ecs:ResetDisk', 'ecs:ResizeDisk', 'ecs:DeleteDisk', 'ecs:DetachDisk'],
+	children: ['ecs:CreateDisk', 'ecs:AttachDisk', 'ecs:ModifyDiskAttribute', 'ecs:ReplaceSystemDisk', 'ecs:ReInitDisk', 'ecs:ResetDisk', 'ecs:ResizeDisk', 'ecs:DeleteDisk', 'ecs:DetachDisk',]
 }, 
+{
+	label: 'ECS_Image',
+	children: ['ecs:CreateImage', 'ecs:ImportImage', 'ecs:ExportImage', 'ecs:ModifyImageAttribute', 'ecs:DeleteImage', 'ecs:CopyImage', 'ecs:CancelCopyImage',]
+},
 {	
-	label: 'ECS_SSH',
-	children: ['ecs:CreateKeyPair', 'ecs:AttachKeyPair', 'ecs:ImportKeyPair', 'ecs:DeleteKeyPairs', 'ecs:DetachKeyPair']
+	label: 'ECS_SSH Key',
+	children: ['ecs:CreateKeyPair', 'ecs:AttachKeyPair', 'ecs:ImportKeyPair', 'ecs:DeleteKeyPairs', 'ecs:DetachKeyPair',]
+},
+{
+	label: 'ECS_Power Action',
+	children: ['ecs:RunInstances', 'ecs:RebootInstance', 'ecs:StartInstance', 'ecs:StopInstance',]
 },
 {	
   label: 'OSS_General',
-  children: ['oss:*', 'oss:Get*', 'oss:Put*', 'oss:List*']
-}, {
+  children: ['oss:*', 'oss:Get*', 'oss:Put*', 'oss:List*',]
+}, 
+{
   label: 'OSS_Object',
   children: ['oss:GetObject', 'oss:PutObject', 'oss:DeleteObject', 'oss:GetObjectAcl', 'oss:PutObjectAcl', 'oss:ListParts', 'oss:AbortMultipartUpload', 'oss:ListObjects', 'oss:RestoreObject',]
-}, {
+}, 
+{
   label: 'OSS_Bucket',
   children: ['oss:ListBuckets', 'oss:PutBucket', 'oss:DeleteBucket', 'oss:GetBucketLocation', 'oss:ListMultipartUploads', 'oss:PutBucketAcl', 'oss:GetBucketAcl', 'oss:PutBucketReferer', 'oss:GetBucketReferer', 'oss:PutBucketLogging', 'oss:GetBucketLogging', 'oss:DeleteBucketLogging', 'oss:PutBucketWebsite', 'oss:GetBucketWebsite', 'oss:DeleteBucketWebsite', 'oss:PutBucketLifecycle', 'oss:GetBucketLifecycle', 'oss:DeleteBucketLifecycle', 'oss:PutBucketCors', 'oss:GetBucketCors', 'oss:DeleteBucketCors', 'oss:PutBucketReplication', 'oss:GetBucketReplication', 'oss:DeleteBucketReplication', 'oss:GetBucketReplicationLocation', 'oss:GetBucketReplicationProgress'] 
 }];
