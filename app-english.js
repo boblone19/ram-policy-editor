@@ -10,14 +10,27 @@ var TagsInput = require('react-tagsinput');
 var EffectList = ['Allow', 'Deny'];
 
 var ActionList = [{
-  label: 'General',
+	label: 'ECS_General',
+	children: ['ecs:*', 'ecs:CreateInstance', 'ecs:DeleteInstance', 'ecs:ModifyInstanceAttribute', 'ecs:ModifyInstanceAutoReleaseTime', 'ecs:ModifyInstanceChargeType', 'ecs:ModifyInstanceVncPasswd']
+},
+{
+	label: 'ECS_Disk',
+	children: ['ecs:CreateDisk', 'ecs:AttachDisk', 'ecs:ModifyDiskAttribute', 'ecs:ReplaceSystemDisk', 'ecs:ReInitDisk', 'ecs:ResetDisk', 'ecs:ResizeDisk', 'ecs:DeleteDisk', 'ecs:DetachDisk'],
+}, 
+{	
+	label: 'ECS_SSH',
+	children: ['ecs:CreateKeyPair', 'ecs:AttachKeyPair', 'ecs:ImportKeyPair', 'ecs:DeleteKeyPairs', 'ecs:DetachKeyPair']
+},
+{	
+  label: 'OSS_General',
   children: ['oss:*', 'oss:Get*', 'oss:Put*', 'oss:List*']
 }, {
-  label: 'Object',
+  label: 'OSS_Object',
   children: ['oss:GetObject', 'oss:PutObject', 'oss:DeleteObject', 'oss:GetObjectAcl', 'oss:PutObjectAcl', 'oss:ListParts', 'oss:AbortMultipartUpload', 'oss:ListObjects', 'oss:RestoreObject',]
 }, {
-  label: 'Bucket',
-  children: ['oss:ListBuckets', 'oss:PutBucket', 'oss:DeleteBucket', 'oss:GetBucketLocation', 'oss:ListMultipartUploads', 'oss:PutBucketAcl', 'oss:GetBucketAcl', 'oss:PutBucketReferer', 'oss:GetBucketReferer', 'oss:PutBucketLogging', 'oss:GetBucketLogging', 'oss:DeleteBucketLogging', 'oss:PutBucketWebsite', 'oss:GetBucketWebsite', 'oss:DeleteBucketWebsite', 'oss:PutBucketLifecycle', 'oss:GetBucketLifecycle', 'oss:DeleteBucketLifecycle', 'oss:PutBucketCors', 'oss:GetBucketCors', 'oss:DeleteBucketCors', 'oss:PutBucketReplication', 'oss:GetBucketReplication', 'oss:DeleteBucketReplication', 'oss:GetBucketReplicationLocation', 'oss:GetBucketReplicationProgress'] }];
+  label: 'OSS_Bucket',
+  children: ['oss:ListBuckets', 'oss:PutBucket', 'oss:DeleteBucket', 'oss:GetBucketLocation', 'oss:ListMultipartUploads', 'oss:PutBucketAcl', 'oss:GetBucketAcl', 'oss:PutBucketReferer', 'oss:GetBucketReferer', 'oss:PutBucketLogging', 'oss:GetBucketLogging', 'oss:DeleteBucketLogging', 'oss:PutBucketWebsite', 'oss:GetBucketWebsite', 'oss:DeleteBucketWebsite', 'oss:PutBucketLifecycle', 'oss:GetBucketLifecycle', 'oss:DeleteBucketLifecycle', 'oss:PutBucketCors', 'oss:GetBucketCors', 'oss:DeleteBucketCors', 'oss:PutBucketReplication', 'oss:GetBucketReplication', 'oss:DeleteBucketReplication', 'oss:GetBucketReplicationLocation', 'oss:GetBucketReplicationProgress'] 
+}];
 
 var ConditionList = ['acs:SourceIp', 'acs:UserAgent', 'acs:CurrentTime', 'acs:SecureTransport', 'oss:Prefix', 'oss:Delimiter'];
 
@@ -31916,9 +31929,9 @@ module.exports = require('./lib/React');
 
 },{"./lib/React":59}],165:[function(require,module,exports){
 module.exports={
-  "name": "ram-policy-editor",
-  "version": "1.2.0",
-  "description": "Visual RAM Policy Editor",
+  "name": "ram-policy-generator",
+  "version": "0.1.0",
+  "description": "Visual RAM Policy Generator",
   "main": "app.js",
   "dependencies": {
     "babel-preset-react": "^6.5.0",
@@ -31935,7 +31948,7 @@ module.exports={
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aliyun/ram-policy-editor.git"
+    "url": "git+https://github.com/"
   },
   "keywords": [
     "Aliyun",
@@ -31944,12 +31957,12 @@ module.exports={
     "Policy",
     "react"
   ],
-  "author": "Tianlong Wu",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aliyun/ram-policy-editor/issues"
+    "url": "https://github.com/"
   },
-  "homepage": "https://github.com/aliyun/ram-policy-editor#readme"
+  "homepage": "https://github.com/"
 }
 
 },{}],166:[function(require,module,exports){
